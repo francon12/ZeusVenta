@@ -8,12 +8,70 @@ body{
     background-attachment: fixed;
     overflow-x: hidden; 
 }
+/*----------- nav ---------------*/
+.img{
+    width: 5vw;
+    margin-left: 20px;
+}
+#nav{
+    background-color: #121213d8;
+    height: 10vh;
+    opacity: .8;
+}
+#nave{
+        color: #e8ba1e;
+        font-size: 15px;
+        margin-right: 15px;
+    }
+.position{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: black;
+    }
+.tp{
+    max-height: 85rem;
+    width: 100%;
+    opacity: .4;
+}
+.abs{
+    position: absolute;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------- section---------------*/
+.zeusMachines{
+    font-size: 50px;
+    color: #eeebe3;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.gym{
+    color: #adadad;
+    font-size: 30px;
+}
+.historia{
+    color: #6c6a6b;
+    font-size: 10px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
 .text{
     text-align: center;
     font-size: 15px;
-    font-weight: bold;
-    margin-top: 15px;
     color: #e8ba1e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.textPrecio{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #eeebe3;
 }
 .bor{
     color: #242422;
@@ -23,12 +81,31 @@ body{
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-style: italic;
     color: #6c6a6b;
     margin-bottom: 15px;
 }
 .dat{
+    border-color: #e8ba1e;
+    border-width: 2px;
+    border-style: solid;
+}
+.cartasImg{
+    width: 25vw;
+    height: auto;   
+}
+.nosotros{
+    background:#3f3d3ef3 url(img/nosotros.webp);
+    width: 100%;
+    height: auto;
+    
+}
+.centro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.tamaño{
+    background-color: #242422;
     border-color: #e8ba1e;
     border-width: 2px;
     border-style: solid;
