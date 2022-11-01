@@ -9,6 +9,10 @@ let carrito = {}
 
 document.addEventListener('DOMContentLoaded', () => { 
     fetchData()
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+    }
 })
 cards.addEventListener("click", e => {
     addCarrito(e)
@@ -46,6 +50,14 @@ const addCarrito = e => {
     //console.log(e.target.classList.contains("btn-dark"))
     if (e.target.classList.contains("btn-dark")) {
         setCarrito(e.target.parentElement)
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Agregado al carrito',
+            color: "#121213d8",
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
     e.stopPropagation()
 }
@@ -82,6 +94,8 @@ const pintarCarrito = () => {
     items.appendChild(fragment)
 
     pintarFooter()
+
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 const pintarFooter = () => {
     footer.innerHTML = ""
@@ -105,6 +119,15 @@ const pintarFooter = () => {
     btnVaciar.addEventListener("click", () => {
         carrito = {}
         pintarCarrito()
+        Toastify({
+            text: "Orden de compra en proceso!",
+            duration: 3000,
+            gravity: "bottom",
+            position: "left",
+            style: {
+                background: 'linear-gradient(to right, #00b09b, #96c92d)'
+            }
+        }).showToast();
     })
 }
 

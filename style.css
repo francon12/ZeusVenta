@@ -110,3 +110,20 @@ body{
     border-width: 2px;
     border-style: solid;
 }
+/*----------- footer ---------------*/
+.flow{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+.pieF{
+    width: 3vw;
+    height: auto;
+}
+.pie{
+    width: 5vw;
+    height: auto;
+}
+.rSociales{
+    background-color: black;
+}
